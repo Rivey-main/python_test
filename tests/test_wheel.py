@@ -15,6 +15,8 @@ def test_wrong_guess(game):
 
 def test_invalid_input(game):
     with pytest.raises(ValueError):
+        game.guess_letter("1")
+    with pytest.raises(ValueError):
         game.guess_letter("многобукв")
 
 def test_game_win(game):
